@@ -1,0 +1,59 @@
+@import '/src/index.scss';
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 415px; //imposé par le scénario
+  min-height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    &:first-child {
+      left: 10px;
+    }
+
+    &:last-child {
+      right: 10px;
+    }
+  }
+  .counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+
+

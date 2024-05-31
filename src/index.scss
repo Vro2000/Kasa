@@ -1,0 +1,15 @@
+// Couleurs
+$primary-color: #FF6060;
+$secondary-color: #F6f6f6;
+
+// Polices
+$font-primary: 'Montserrat';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-size: 18px;
+}
+

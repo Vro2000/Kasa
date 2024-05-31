@@ -1,0 +1,44 @@
+// src/components/Collapse/Collapse.scss
+@import 'src/index.scss';
+
+.collapse-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .collapse-button {
+    border: none;
+    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: $primary-color;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .collapse-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $secondary-color;
+
+    &.open {
+      max-height: 500px; 
+    }
+  }
+}
+
+.collapse-icon {
+  transition: transform 0.1s ease;
+}
+.rotate {
+  transform: rotate(180deg);
+}

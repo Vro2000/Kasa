@@ -1,0 +1,40 @@
+// src/pages/LogementDetail/LogementDetail.scss
+
+@import '/src/index.scss';
+
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .right-column{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+
+    h1 {
+      color: $primary-color;
+      font-size: 36px;
+      font-weight: 500;
+      margin: 0;
+
+    }
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 10px 0 30px 0;
+
+    }
+  }
+}
+.detail-collapse {
+  display: flex;
+
+  .collapse-container {
+    width: 50%;
+  }
+}

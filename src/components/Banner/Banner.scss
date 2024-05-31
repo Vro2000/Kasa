@@ -1,0 +1,32 @@
+//src/components/Banner/Banner.css
+@import '/src/index.scss'; // Vérifiez que le chemin d'accès est correct
+
+.banner {
+  position: relative; // Nécessaire pour positionner l'overlay correctement
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 25px;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); // Noir avec 60% d'opacité
+    border-radius: 25px; 
+  }
+
+  h1 {
+    position: relative; 
+    z-index: 1; // Élève le texte au-dessus de l'overlay
+    font-size: 48px;
+    font-weight: 600;
+  }
+}
+
