@@ -6,7 +6,7 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer>
-      <NavLink to="/"><img src="/images/logo.png" alt="Logo" /></NavLink>
+      <NavLink to="/"><img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo" /></NavLink>
       <p>© 2020 Kasa. all rights reserved</p>
     </footer>
   );

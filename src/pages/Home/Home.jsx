@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <div>
-      <Banner text="Chez vous, partout et ailleurs" backgroundUrl="/images/paysageMer.jpg" altText="paysage mer"/>
+      <Banner text="Chez vous, partout et ailleurs" backgroundUrl={process.env.PUBLIC_URL + '/images/paysageMer.jpg'} altText="paysage mer"/>
       <LogementList logements={logements} />
     </div>
   );

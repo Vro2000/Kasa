@@ -8,7 +8,7 @@ import './APropos.scss';
 const APropos = () => {
   return (
     <div>
-      <Banner text=" " backgroundUrl="/Images/paysageMontagne.jpg" showOverlay={false} />
+      <Banner text=" " backgroundUrl={process.env.PUBLIC_URL + '/images/paysageMontagne.jpg '} showOverlay={false} />
       <div className="apropos-collapses">
         {aboutJson.map((item, index) => (
           <Collapse key={index} label={item.title} content={item.content} />
