@@ -14,7 +14,7 @@ const Collapse = ({ label, content }) => {
        <button className="collapse-button">
         {label}
         <img
-          src="/Images/arrow_back_ios-24px 2.png" alt="Icône ouvert-fermé"
+          src="/images/arrow_back_ios-24px 2.png" alt="Icône ouvert-fermé"
           className={`collapse-icon ${isOpen ? 'rotate' : ''}`}
           onClick={toggleCollapse}
         />
