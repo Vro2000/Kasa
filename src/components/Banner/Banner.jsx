@@ -1,11 +1,12 @@
 //src/components/Banner/Banner.jsx
 import React from 'react';
-import './Banner.scss'; // Assurez-vous que le chemin est correct
+import './Banner.scss';
 
-const Banner = ({ text, backgroundUrl }) => {
+const Banner = ({ text, backgroundUrl, altText, showOverlay = true }) => {
   return (
-    <div className="banner" style={{ backgroundImage: `url(${backgroundUrl})` }}>
-      <div className="overlay"></div>
+    <div className="banner">
+      <img src={backgroundUrl} alt={altText} className="background-image" />
+      {showOverlay && <div className="overlay"></div>}
       <h1>{text}</h1>
     </div>
   );

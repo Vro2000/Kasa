@@ -1,3 +1,4 @@
+//src/components/LogementList/LogementList.jsx
 import React from 'react';
 import LogementItem from '../LogementItem/LogementItem';
 import './LogementList.scss';

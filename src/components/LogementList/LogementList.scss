@@ -1,12 +1,20 @@
+//src/components/LogementList/LogementList.scss
 @import '/src/index.scss';
 
 .logement-list {
     display: flex;
     flex-wrap: wrap;
     background-color: $secondary-color;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 25px 20px;
-    margin: 30px 0;
+    margin: 30px 0; 
     gap: 2%;
+
+ // Media Query pour écrans inférieurs à 580px
+ @media (max-width: 580px) {
+    padding: 0; // Supprime le padding
+    background-color: transparent; // Supprime le background color
+    margin-top: 10px;
+ }
 }
   

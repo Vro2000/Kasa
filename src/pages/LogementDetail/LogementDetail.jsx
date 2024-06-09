@@ -28,26 +28,25 @@ const LogementDetail = () => {
 
   return (
     <div>
-      <Carousel images={logement.pictures} />
-
-      <div className="detail-container">
-        <div className="left-column">
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
-          <Tags tags={logement.tags} />
-        </div>
-        
-        <div className="right-column">
-          <Profil imageUrl={logement.host.picture} name={logement.host.name} rating={parseInt(logement.rating, 10)} />
-        </div>
+      <div className="carousel">
+        <Carousel images={logement.pictures} />
       </div>
-      <div className="detail-collapse">     
-        <Collapse  label="Description complète" content={logement.description} />
-        <Collapse  label="Équipements" content={<ul>{logement.equipments.map((equip, index) => <li key={index}>{equip}</li>)}</ul>} />
-      </div> 
+
+      <div className='container'>
+          <div className="titre-info">
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+          </div>
+          <Profil  className="profil" imageUrl={logement.host.picture} name={logement.host.name} rating={parseInt(logement.rating, 10)} />
+          <Tags  className="tags" tags={logement.tags} />
+      </div>
+
+      <div className="collapses">
+        <Collapse label="Description" content={logement.description} />
+        <Collapse label="Équipements" content={<ul>{logement.equipments.map((equip, index) => <li key={index}>{equip}</li>)}</ul>} />
+      </div>
     </div>
   );
-};
+}
 
 export default LogementDetail;
-

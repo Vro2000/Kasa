@@ -3,37 +3,45 @@
 header {
   display: flex;
   align-items: center;
-  padding: 30px 80px;
+  margin: 30px 7%;
   justify-content: space-between;
 
   .logo img{
-    height: 50px;
-    color: $primary-color;
+    height: calc(30px + 2vw); /* Commence à 30px et augmente avec la largeur du viewport 2%*/
   }
- 
-  ul {
-    display: flex;
-    width: 400px;
-    list-style: none;
-    padding: 0;
-    align-items: center; 
-    justify-content: right;
 
-    li {
-      margin-left: 40px;
+  nav{
+    width: 100%;
 
-      a {
-        font-size: 24px;
-        font-weight: 500;
-        text-decoration: none;
-        color: black; 
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center; 
+      justify-content: flex-end;
+      gap: 25px;
+
+      li {
+        a {
+          font-size: calc(12px + (24 - 12) * ((100vw - 375px) / (1440 - 375)));
+          //calcule une taille de police qui s'ajuste entre 14px et 24px à mesure que la largeur du viewport varie entre 375px et 1440px.
+          font-weight: 500;
+          text-decoration: none;
+          color: black; 
 
 
-        &:hover, &.active {
-          text-decoration: underline;
+          &:hover, &.active {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
 }
 
+@media (max-width: 580px) {
+  nav ul li a {
+    text-transform: uppercase; /* Change le texte en majuscules pour les écrans plus larges */
+    font-size: 12px;
+
+  }
+}

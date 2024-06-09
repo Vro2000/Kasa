@@ -1,3 +1,4 @@
+//src/components/LogementItem/LogementItem.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LogementItem.scss';

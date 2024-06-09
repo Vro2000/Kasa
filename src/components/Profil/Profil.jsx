@@ -3,7 +3,7 @@ import './Profil.scss';
 
 const Profil = ({ imageUrl, name, rating }) => {
   const stars = Array.from({ length: 5 }, (_, index) => {
-    const starFile = index < rating ? 'Star-active.png' : 'star-inactive 1.png';
+    const starFile = index < rating ? 'Star-active.png' : 'star-inactive.png';
     return (
       <img key={index} src={`/Images/${starFile}`} alt={index < rating ? 'active star' : 'inactive star'} />
     );

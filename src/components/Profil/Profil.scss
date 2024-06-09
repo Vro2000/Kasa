@@ -18,20 +18,50 @@
       flex-grow: 1;
       text-align: right;
       margin-right: 10px;
+      color: $primary-color;
     }
-
     img {
       width: 90px;
-      height: 90px;
       border-radius: 50%;
     }
   }
-
   .rating {
     display: flex;
     align-items: center;
     color: $primary-color;
     margin-top: 20px; 
     gap: 10px;
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+ .profil {
+    display: flex;
+    flex-direction: row;  
+    width: 100%;
+
+    .name-and-photo {
+      width: 196px;
+      order: 2; 
+      margin-left: auto;
+
+      img{
+        width: 70px;
+      }
+    }
+    .rating {
+      order: 1;  
+      width: 196px;
+      margin-top: 0px; 
+
+      img {
+        width: 12%;
+      }
+    }
   }
 }

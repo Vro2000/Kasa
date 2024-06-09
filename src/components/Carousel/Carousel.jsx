@@ -19,10 +19,10 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <button onClick={goToPrevious}><i class="fa-solid fa-chevron-left"></i> </button>
+      <button onClick={goToPrevious}><i className="fa-solid fa-chevron-left"></i> </button>
       <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-      <div className="counter"> {currentIndex + 1} / {images.length} </div>
-      <button onClick={goToNext}><i class="fa-solid fa-chevron-right"></i></button>
+      {images.length > 1 && ( <div className="counter"> {currentIndex + 1} / {images.length} </div> )}
+      <button onClick={goToNext}><i className="fa-solid fa-chevron-right"></i></button>
     </div>
   );
 };

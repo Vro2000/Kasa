@@ -2,31 +2,49 @@
 @import '/src/index.scss'; // Vérifiez que le chemin d'accès est correct
 
 .banner {
-  position: relative; // Nécessaire pour positionner l'overlay correctement
-  height: 223px;
+  position: relative; // Nécessaire pour positionner l'overlay et l'image correctement
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  border-radius: 25px;
+  border-radius: 20px;
+  overflow: hidden; // Empêche l'image et overlay de déborder du border-radius
 
-  .overlay {
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 18.43%; //  Ratio calculé basé sur 223px / 1240px environ 18.43%
+    min-height: 40px;
+  }
+
+  .background-image, .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); // Noir avec 60% d'opacité
-    border-radius: 25px; 
+  }
+
+  .background-image {
+    object-fit: cover; // Assure que l'image couvre le conteneur sans être déformée
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5); // Noir avec 50% d'opacité
   }
 
   h1 {
-    position: relative; 
-    z-index: 1; // Élève le texte au-dessus de l'overlay
-    font-size: 48px;
+    margin: 0;
+    padding: 0 100px 0 20px;
+    position: relative;
+    color: white; 
     font-weight: 600;
+    font-size: calc(22px + (48 - 22) * ((100vw - 375px) / (1440 - 375)));
+    //calcule une taille de police qui s'ajuste entre 24px et 48px à mesure que la largeur du viewport varie entre 375px et 1440px.
   }
 }
-
+ // Media Query pour écrans inférieurs à 580px
+ @media (max-width: 580px) {
+.banner {
+  border-radius: 10px;
+}
+}

@@ -2,43 +2,59 @@
 @import 'src/index.scss';
 
 .collapse-container {
-  margin-bottom: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 
+  .collapse-button, .collapse-content {
+    font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (1440 - 375)));
+  }
+
   .collapse-button {
+    padding: 10px;
     border: none;
-    max-height: 50px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 0 10px;
     background-color: $primary-color;
     border-radius: 10px;
     color: white;
-    font-size: 18px;
     font-weight: 600;
-    cursor: pointer;
   }
 
   .collapse-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.3s ease-in-out;
-    font-size: 18px;
     font-weight: 400;
     background-color: $secondary-color;
 
     &.open {
-      max-height: 500px; 
+      padding: 20px;
+      max-height: 500px;
     }
   }
 }
 
 .collapse-icon {
+  cursor: pointer;
   transition: transform 0.1s ease;
+
+  &:hover {
+    filter: brightness(0.8) hue-rotate(90deg);
+  }
 }
+
 .rotate {
   transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .collapse-container .collapse-button {
+    height: 40px;
+
+  }
+  .collapse-button img {
+    width: 20px;
+  }
 }

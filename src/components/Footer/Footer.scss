@@ -1,12 +1,14 @@
 @import '/src/index.scss';
 
 footer {
+    margin-top: 40px;
     padding: 20px;
     text-align: center;
     background-color: black;
     color: white;
 
     img {
+    height: calc(30px + 2vw); /* Commence à 30px et augmente avec la largeur du viewport 2%*/
     margin: 25px 0 20px 0;
     }
   }

@@ -1,3 +1,4 @@
+//src/components/LogementItem/LogementItem.scss
 @import '/src/index.scss';
 
   figure {
@@ -17,6 +18,9 @@
       border-radius: 10px;
       top: 0;
     }
+    img {
+      object-fit: cover;
+    }
 
     figcaption {
       display: flex;
@@ -30,6 +34,21 @@
         font-weight: 500;
       }
     }
+  
+  // Media Query pour écrans inférieurs à 580px
+  @media (max-width: 580px) {
+    width: 100%;  // Prend toute la largeur disponible
+    margin: 10px 0;  // Ajuster selon les besoins pour un meilleur espacement vertical
+
+    &:before {
+      padding-top: 75%;  
+    }
   }
+
+  // Media Query pour écrans entre 580px et 768px
+  @media (min-width: 580px) and (max-width: 768px) {
+    width: 47%; 
+  }
+}
 
 

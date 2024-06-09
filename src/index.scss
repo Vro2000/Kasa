@@ -5,11 +5,21 @@ $secondary-color: #F6f6f6;
 // Polices
 $font-primary: 'Montserrat';
 
-html, body {
+html {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-primary;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (1440 - 375)));
+    //calcule une taille de police qui s'ajuste entre 14px et 18px à mesure que la largeur du viewport varie entre 280px et 1440px.
+   
+    body {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;  // Centre horizontalement
+    width: 100%; 
+    }  
 }
 
