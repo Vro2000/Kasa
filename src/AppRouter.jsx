@@ -9,7 +9,7 @@ import LogementDetail from './pages/LogementDetail/LogementDetail';
 
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
