@@ -7,16 +7,17 @@ import APropos from './pages/APropos/APropos';
 import AppLayout from './components/AppLayout/AppLayout';
 import LogementDetail from './pages/LogementDetail/LogementDetail';
 
+
 const AppRouter = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <AppLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<APropos />} />
-          <Route path="/logement/:id" element={<LogementDetail />} />
-          <Route path="*" element={<Erreur404 />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} errorElement={<Erreur404 />} />
+        <Route path="/about" element={<APropos />} errorElement={<Erreur404 />} />
+        <Route path="/logement/:id" element={<LogementDetail />} errorElement={<Erreur404 />} />
+        <Route path="*" element={<Erreur404 />} />
+      </Routes>
       </AppLayout>
     </Router>
   );
